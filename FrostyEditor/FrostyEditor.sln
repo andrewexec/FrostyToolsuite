@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrostyEditor", "FrostyEdito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrostySdk", "..\FrostySdk\FrostySdk.csproj", "{93FB4A0C-DF89-4169-80B5-C4E2277FF7A0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrostySdkTest", "..\FrostySdkTest\FrostySdkTest.csproj", "{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrostyModManager", "..\FrostyModManager\FrostyModManager.csproj", "{B72B292F-1309-4205-A3FC-3E4EA584CDE8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrostyControls", "..\FrostyControls\FrostyControls.csproj", "{51D3305B-48D0-4D4C-9D64-727185420EAC}"
@@ -124,6 +126,16 @@ Global
 		{93FB4A0C-DF89-4169-80B5-C4E2277FF7A0}.Release - Final|x64.Build.0 = Release - Final|x64
 		{93FB4A0C-DF89-4169-80B5-C4E2277FF7A0}.Release|x64.ActiveCfg = Release - Final|x64
 		{93FB4A0C-DF89-4169-80B5-C4E2277FF7A0}.Release|x64.Build.0 = Release - Final|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Developer - Debug|x64.ActiveCfg = Developer - Debug|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Developer - Debug|x64.Build.0 = Developer - Debug|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release - Alpha|x64.ActiveCfg = Release - Alpha|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release - Alpha|x64.Build.0 = Release - Alpha|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release - Beta|x64.ActiveCfg = Release - Beta|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release - Beta|x64.Build.0 = Release - Beta|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release - Final|x64.ActiveCfg = Release - Final|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release - Final|x64.Build.0 = Release - Final|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release|x64.ActiveCfg = Release - Final|x64
+		{8F53A2C0-A7D2-4E80-A0FD-4BD88A6C2650}.Release|x64.Build.0 = Release - Final|x64
 		{B72B292F-1309-4205-A3FC-3E4EA584CDE8}.Developer - Debug|x64.ActiveCfg = Developer - Debug|x64
 		{B72B292F-1309-4205-A3FC-3E4EA584CDE8}.Developer - Debug|x64.Build.0 = Developer - Debug|x64
 		{B72B292F-1309-4205-A3FC-3E4EA584CDE8}.Release - Alpha|x64.ActiveCfg = Release - Alpha|x64

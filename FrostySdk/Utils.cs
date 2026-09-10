@@ -729,7 +729,7 @@ namespace FrostySdk
 
         public static Sha1 GenerateSha1(byte[] buffer)
         {
-            using (SHA1Managed sha1 = new SHA1Managed())
+            using (SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider())
             {
                 Sha1 newSha1 = new Sha1(sha1.ComputeHash(buffer));
                 return newSha1;
@@ -1023,7 +1023,7 @@ namespace FrostySdk
             stream.next_out = ptr2.AddrOfPinnedObject();
             Marshal.StructureToPtr(stream, streamPtr, true);
 
-            int retCode = ZLib.DeflateInit(streamPtr, 9, "1.2.11", Marshal.SizeOf<ZLib.ZStream>());
+            int retCode = ZLib.DeflateInit(streamPtr, 6, "1.2.11", Marshal.SizeOf<ZLib.ZStream>());
             retCode = ZLib.Deflate(streamPtr, ZLib.Z_FINISH);
 
             // copy out size
