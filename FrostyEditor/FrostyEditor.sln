@@ -87,6 +87,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RootInstanceEntriesPlugin",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaunchPlatformPlugin", "..\Plugins\LaunchPlatformPlugin\LaunchPlatformPlugin.csproj", "{7F280BF3-F794-4715-9D32-770D36454B8C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatapathFixPlugin", "..\Plugins\DatapathFixPlugin\DatapathFixPlugin.csproj", "{B971380F-31FC-4715-AA48-6A806858A36B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatapathFix", "..\Plugins\DatapathFixPlugin\DatapathFix\DatapathFix.csproj", "{2A999794-AA27-4E21-8C72-9794B7AA42F3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrostyCmd", "..\FrostyCmd\FrostyCmd.csproj", "{500ACAB7-D948-4BCA-8208-20812D712DDB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DifficultyWeaponTableDataPlugin", "..\Plugins\DifficultyWeaponTableDataPlugin\DifficultyWeaponTableDataPlugin.csproj", "{F49314ED-C795-4A39-9748-68D936B35D2C}"
@@ -500,6 +504,26 @@ Global
 		{7F280BF3-F794-4715-9D32-770D36454B8C}.Release - Final|x64.Build.0 = Release - Final|x64
 		{7F280BF3-F794-4715-9D32-770D36454B8C}.Release|x64.ActiveCfg = Release - Alpha|x64
 		{7F280BF3-F794-4715-9D32-770D36454B8C}.Release|x64.Build.0 = Release - Alpha|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Developer - Debug|x64.ActiveCfg = Developer - Debug|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Developer - Debug|x64.Build.0 = Developer - Debug|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release - Alpha|x64.ActiveCfg = Release - Alpha|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release - Alpha|x64.Build.0 = Release - Alpha|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release - Beta|x64.ActiveCfg = Release - Beta|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release - Beta|x64.Build.0 = Release - Beta|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release - Final|x64.ActiveCfg = Release - Final|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release - Final|x64.Build.0 = Release - Final|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release|x64.ActiveCfg = Release - Alpha|x64
+		{B971380F-31FC-4715-AA48-6A806858A36B}.Release|x64.Build.0 = Release - Alpha|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Developer - Debug|x64.ActiveCfg = Developer - Debug|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Developer - Debug|x64.Build.0 = Developer - Debug|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release - Alpha|x64.ActiveCfg = Release - Alpha|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release - Alpha|x64.Build.0 = Release - Alpha|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release - Beta|x64.ActiveCfg = Release - Beta|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release - Beta|x64.Build.0 = Release - Beta|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release - Final|x64.ActiveCfg = Release - Final|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release - Final|x64.Build.0 = Release - Final|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release|x64.ActiveCfg = Release - Alpha|x64
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3}.Release|x64.Build.0 = Release - Alpha|x64
 		{500ACAB7-D948-4BCA-8208-20812D712DDB}.Developer - Debug|x64.ActiveCfg = Developer - Debug|x64
 		{500ACAB7-D948-4BCA-8208-20812D712DDB}.Developer - Debug|x64.Build.0 = Developer - Debug|x64
 		{500ACAB7-D948-4BCA-8208-20812D712DDB}.Release - Alpha|x64.ActiveCfg = Release - Alpha|x64
@@ -558,6 +582,8 @@ Global
 		{B1FE3166-BBD2-4112-8618-1C5587E32CC4} = {492048B6-848D-4675-A9BF-34A4751303F2}
 		{FE2D780C-8FBC-4797-9ACD-05DE2507F1AA} = {492048B6-848D-4675-A9BF-34A4751303F2}
 		{7F280BF3-F794-4715-9D32-770D36454B8C} = {492048B6-848D-4675-A9BF-34A4751303F2}
+		{B971380F-31FC-4715-AA48-6A806858A36B} = {492048B6-848D-4675-A9BF-34A4751303F2}
+		{2A999794-AA27-4E21-8C72-9794B7AA42F3} = {492048B6-848D-4675-A9BF-34A4751303F2}
 		{F49314ED-C795-4A39-9748-68D936B35D2C} = {492048B6-848D-4675-A9BF-34A4751303F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
