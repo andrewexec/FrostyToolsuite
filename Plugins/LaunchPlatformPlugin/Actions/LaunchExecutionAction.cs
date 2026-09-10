@@ -121,6 +121,7 @@ namespace LaunchPlatformPlugin.Actions
                 }
                 catch (OperationCanceledException)
                 {
+                    logger.Log("Cancelled waiting for platform to launch");
                 }
             }
         });
@@ -154,6 +155,7 @@ namespace LaunchPlatformPlugin.Actions
                     }
                     catch (OperationCanceledException)
                     {
+                        logger.Log("Cancelled waiting for game to launch");
                     }
                 }
             }

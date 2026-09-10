@@ -899,7 +899,7 @@ namespace FrostySdk.IO
                             if (fieldProp != null)
                             {
                                 try { fieldProp.GetValue(obj).GetType().GetMethod("Add").Invoke(fieldProp.GetValue(obj), new object[] { value }); }
-                                catch (Exception) { }
+                                catch (Exception ex) { System.Diagnostics.Debug.WriteLine($"EbxReader: failed to add array value to field '{fieldProp.Name}' on {classType.Name}: {ex.Message}"); }
                             }
                         }
                         Position = arrayPos;
@@ -910,7 +910,7 @@ namespace FrostySdk.IO
                         if (fieldProp != null)
                         {
                             try { fieldProp.SetValue(obj, value); }
-                            catch (Exception) { }
+                            catch (Exception ex) { System.Diagnostics.Debug.WriteLine($"EbxReader: failed to set field '{fieldProp.Name}' on {classType.Name}: {ex.Message}"); }
                         }
                     }
                 }

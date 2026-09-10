@@ -296,6 +296,7 @@ namespace SoundEditorPlugin
                         }
                         catch (Exception e)
                         {
+                            App.Logger.LogWarning($"Failed to render waveform: {e.Message}");
                         }
 
                         track.SegmentCount = runtimeVariation.SegmentCount;
@@ -458,6 +459,7 @@ namespace SoundEditorPlugin
                         }
                         catch (Exception e)
                         {
+                            App.Logger.LogWarning($"Failed to render waveform: {e.Message}");
                         }
 
                         track.SegmentCount = 1;
@@ -652,6 +654,7 @@ namespace SoundEditorPlugin
                         }
                         catch (Exception e)
                         {
+                            App.Logger.LogWarning($"Failed to render waveform: {e.Message}");
                         }
 
                         track.SegmentCount = 1;
