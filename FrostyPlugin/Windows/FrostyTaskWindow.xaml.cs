@@ -174,5 +174,19 @@ namespace Frosty.Core.Windows
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        private void minimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+
+            if (this.Owner != null)
+            {
+                this.Owner.WindowState = WindowState.Minimized;
+            }
+            foreach (Window window in this.OwnedWindows)
+            {
+                window.WindowState = WindowState.Minimized;
+            }
+        }
     }
 }
