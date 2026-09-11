@@ -294,6 +294,17 @@ namespace Frosty.ModSupport
                             }
                             else
                             {
+                                if (entry != null && entry.ExtraData == null)
+                                {
+                                    if (archiveData.ContainsKey(entry.Sha1))
+                                    {
+                                        archiveData[entry.Sha1].RefCount--;
+                                        if (archiveData[entry.Sha1].RefCount == 0)
+                                            archiveData.TryRemove(entry.Sha1, out _);
+                                    }
+                                    modifiedEbx.TryRemove(resource.Name, out _);
+                                }
+
                                 entry = new EbxAssetEntry();
                                 extraData = new HandlerExtraData();
 
@@ -387,6 +398,17 @@ namespace Frosty.ModSupport
                             }
                             else
                             {
+                                if (entry != null && entry.ExtraData == null)
+                                {
+                                    if (archiveData.ContainsKey(entry.Sha1))
+                                    {
+                                        archiveData[entry.Sha1].RefCount--;
+                                        if (archiveData[entry.Sha1].RefCount == 0)
+                                            archiveData.TryRemove(entry.Sha1, out _);
+                                    }
+                                    modifiedRes.TryRemove(resource.Name, out _);
+                                }
+
                                 entry = new ResAssetEntry();
                                 extraData = new HandlerExtraData();
 
@@ -484,6 +506,17 @@ namespace Frosty.ModSupport
                             }
                             else
                             {
+                                if (entry != null && entry.ExtraData == null)
+                                {
+                                    if (archiveData.ContainsKey(entry.Sha1))
+                                    {
+                                        archiveData[entry.Sha1].RefCount--;
+                                        if (archiveData[entry.Sha1].RefCount == 0)
+                                            archiveData.TryRemove(entry.Sha1, out _);
+                                    }
+                                    modifiedChunks.TryRemove(guid, out _);
+                                }
+
                                 entry = new ChunkAssetEntry();
                                 extraData = new HandlerExtraData();
 
