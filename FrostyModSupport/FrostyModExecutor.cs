@@ -1044,6 +1044,20 @@ namespace Frosty.ModSupport
             modDirName = "ModData\\" + modPackName;
             cancelToken.ThrowIfCancellationRequested();
 
+            string loadOrderPath = Path.Combine(rootPath, "load_order.json");
+            if (File.Exists(loadOrderPath))
+            {
+                List<string> loadOrder = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(loadOrderPath));
+                if (loadOrder != null && loadOrder.All(path => File.Exists(Path.Combine(rootPath, path))))
+                {
+                    modPaths = loadOrder.ToArray();
+                }
+                else
+                {
+                    App.Logger.LogWarning("load_order.json contains invalid paths, ignoring the load order");
+                }
+            }
+
             App.Logger.Log("Launching");
 
             fs = inFs;
@@ -1887,7 +1901,8 @@ namespace Frosty.ModSupport
             }
             else
             {
-                ExecuteProcess($"{basePath + ProfilesLibrary.ProfileName}.exe", $"-dataPath \"{modDataPath.Trim('\\')}\" {additionalArgs}");
+                Dictionary<string, string> env = new Dictionary<string, string> { { "GAME_DATA_DIR", modDataPath.Trim('\\') } };
+                ExecuteProcess($"{basePath + ProfilesLibrary.ProfileName}.exe", $"-dataPath \"{modDataPath.Trim('\\')}\" {additionalArgs}", env: env);
             }
         }
 

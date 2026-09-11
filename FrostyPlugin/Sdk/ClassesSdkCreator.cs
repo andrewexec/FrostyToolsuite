@@ -530,6 +530,11 @@ namespace Frosty.Core.Sdk
                     }
                     sb.AppendLine("return hash;\r\n}\r\n}");
                 }
+                else if (type == EbxFieldType.Struct)
+                {
+                    sb.AppendLine("public override bool Equals(object obj)\r\n{\r\nreturn obj != null && obj is " + className + ";\r\n}");
+                    sb.AppendLine("public override int GetHashCode()\r\n{\r\nreturn unchecked((int)2166136261);\r\n}");
+                }
 
                 sb.AppendLine("}");
             }

@@ -47,6 +47,7 @@ namespace DatapathFixPlugin.Actions
             try
             {
                 File.WriteAllText(Path.Combine(App.FileSystem.BasePath, "tmp"), cmdArgs);
+                File.WriteAllText(Path.Combine(App.FileSystem.BasePath, "tmp_datadir"), dataPath);
                 File.Move(Game, Game.Replace(".exe", ".orig.exe"));
                 if (File.Exists(Par))
                     File.Copy(Par, Par.Replace(".par", ".orig.par"), true);
@@ -69,6 +70,10 @@ namespace DatapathFixPlugin.Actions
                 string tmpPath = Path.Combine(App.FileSystem.BasePath, "tmp");
                 if (File.Exists(tmpPath))
                     File.Delete(tmpPath);
+
+                string tmpDataDirPath = Path.Combine(App.FileSystem.BasePath, "tmp_datadir");
+                if (File.Exists(tmpDataDirPath))
+                    File.Delete(tmpDataDirPath);
 
                 string origPar = Par.Replace(".par", ".orig.par");
                 if (File.Exists(origPar))

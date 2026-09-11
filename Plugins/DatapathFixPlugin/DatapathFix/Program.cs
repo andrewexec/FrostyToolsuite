@@ -68,13 +68,19 @@ namespace DatapathFix
 
                     try
                     {
-                        Process.Start(new ProcessStartInfo
+                        ProcessStartInfo startInfo = new ProcessStartInfo
                         {
                             FileName = currentPath,
                             WorkingDirectory = Environment.CurrentDirectory,
                             Arguments = dataPathArg,
                             UseShellExecute = false
-                        });
+                        };
+
+                        string dataDirPath = "tmp_datadir";
+                        if (File.Exists(dataDirPath))
+                            startInfo.EnvironmentVariables["GAME_DATA_DIR"] = File.ReadAllText(dataDirPath);
+
+                        Process.Start(startInfo);
                     }
                     catch (Exception e)
                     {
